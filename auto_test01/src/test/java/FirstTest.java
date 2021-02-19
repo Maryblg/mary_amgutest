@@ -8,7 +8,7 @@ import static org.testng.Assert.fail;
 
 
 public class FirstTest {
-    private WebDriver driver;
+    private ChromeDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
