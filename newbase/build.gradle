@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+apply plugin: 'java-library'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    api 'org.seleniumhq.selenium:selenium-java:3.14.0'
+    // https://mvnrepository.com/artifact/org.testng/testng
+    implementation 'org.testng:testng:6.14.3'
+}
+
+task testbase (type : Test) {
+    useTestNG {
+        suites "src/test/resources/testng.xml"
+    }
+}
+
+testbase.doFirst {
+    jvmArgs '-Dwdm.chromeDriverVersion=88.0.4324.182'
+}

@@ -1,5 +1,6 @@
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -8,20 +9,20 @@ import static org.testng.Assert.fail;
 
 
 public class FirstTest {
-    private ChromeDriver driver;
-    private String baseUrl;
+    private WebDriver driver;
+    /*private String baseUrl;*/
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
-        driver = new ChromeDriver();
-        baseUrl = "https://www.google.com/";
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--ignore-certificate-errors");
+        driver = new ChromeDriver(options);
     }
 
     @Test
-    public void testUntitledTestCase() throws Exception {
+    public void testOne() throws Exception {
         driver.get("https://app.geteasyqa.com/users/sign_in");
         driver.findElement(By.id("user_email")).click();
         driver.findElement(By.id("user_email")).clear();
@@ -74,3 +75,4 @@ public class FirstTest {
         }
     }
 }
+

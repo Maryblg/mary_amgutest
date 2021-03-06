@@ -1,6 +1,11 @@
-/*apply plugin: 'java'*/
 plugins {
     id 'java'
+}
+
+apply plugin: 'java-library'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
 
 group 'org.example'
@@ -12,16 +17,19 @@ repositories {
 
 dependencies {
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    api 'org.seleniumhq.selenium:selenium-java:3.14.0'
     // https://mvnrepository.com/artifact/org.testng/testng
-    compile group: 'org.testng', name: 'testng', version: '7.3.0'
+    implementation 'org.testng:testng:6.14.3'
 }
 
-test {
+task testbase (type : Test) {
+    useTestNG {
+        suites "src/test/resources/testng.xml"
+    }
+}
 
-    useTestNG()
-/*useJUnitPlatform()*/
-
+testbase.doFirst {
+    jvmArgs '-Dwdm.chromeDriverVersion=88.0.4324.182'
 }
 
 
