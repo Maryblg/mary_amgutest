@@ -1,6 +1,6 @@
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import org.openqa.selenium.*;
+/*import org.openqa.selenium.*;*/
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
@@ -16,7 +16,7 @@ import static org.testng.Assert.fail;
 
 
 public class FirstTest {
-  private WebDriver driver;/*
+ /* private WebDriver driver;/*
    private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();*/
@@ -26,7 +26,7 @@ public class FirstTest {
        /*ChromeOptions options = new ChromeOptions();
         options.addArguments("--ignore-certificate-errors");
         driver = new ChromeDriver(options);*/
-      Configuration.browserCapabilities.set
+      Configuration.browserCapabilities.
       Configuration.browser="chrome";
 
     }
