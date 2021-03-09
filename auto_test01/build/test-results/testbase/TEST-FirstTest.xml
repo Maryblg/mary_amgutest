@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FirstTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-06T06:43:34" hostname="DESKTOP-IQLPRG6" time="5.865">
+<testsuite name="FirstTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-08T14:57:04" hostname="DESKTOP-IQLPRG6" time="17.4">
   <properties/>
-  <testcase name="testOne" classname="FirstTest" time="5.865"/>
+  <testcase name="testOne" classname="FirstTest" time="17.4"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 46619
+  <system-err><![CDATA[Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 7161
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-мар 06, 2021 3:43:34 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+мар 08, 2021 11:57:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 35816
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+мар 08, 2021 11:57:12 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
