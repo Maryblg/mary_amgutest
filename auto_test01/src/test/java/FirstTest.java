@@ -1,16 +1,15 @@
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 /*import org.openqa.selenium.*;*/
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import com.easyqa.qa.pages.DashboardPage;
+import com.easyqa.qa.pages.LoginPage;
+import com.easyqa.qa.pages.UIMap;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import java.util.concurrent.TimeUnit;
 
 import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.*;
 
 import static org.testng.Assert.fail;
 
@@ -26,14 +25,20 @@ public class FirstTest {
        /*ChromeOptions options = new ChromeOptions();
         options.addArguments("--ignore-certificate-errors");
         driver = new ChromeDriver(options);*/
-      Configuration.browserCapabilities.
-      Configuration.browser="chrome";
+        Configuration.browserCapabilities.setAcceptInsecureCerts(true);
+        Configuration.browser="chrome";
 
     }
 
     @Test
-    public void testOne() throws Exception {
-       open("https://app.geteasyqa.com/users/sign_in");
+    public void testUnitedTestCase() {
+      LoginPage loginPage = open("https://app.geteasyqa.com/users/sign_in",LoginPage.class);
+      loginPage.enterLogin("maryamguxi@gmail.com");
+      loginPage.enterPassword("45test45");
+      DashboardPage dashboardPage = loginPage.clickLoginBtn();
+      dashboardPage.checkUserAuthorized();
+
+    /*
       Selenide.$(UIMap.login).click();
       Selenide.$(UIMap.login).clear();
       Selenide.$(UIMap.login).sendKeys("maryamguxi@gmail.com");
@@ -44,7 +49,7 @@ public class FirstTest {
 
       Selenide.$(UIMap.loginBtn).click();
 
-       /*Selenide.$(By.id("user_email")).click();
+       Selenide.$(By.id("user_email")).click();
       Selenide.$(By.id("user_email")).clear();
       Selenide.$(By.id("user_email")).sendKeys("maryamguxi@gmail.com");
 

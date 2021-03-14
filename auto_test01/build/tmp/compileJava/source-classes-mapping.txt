@@ -1,2 +1,6 @@
-UIMap.java
- UIMap
+com/easyqa/qa/pages/UIMap.java
+ com.easyqa.qa.pages.UIMap
+com/easyqa/qa/pages/DashboardPage.java
+ com.easyqa.qa.pages.DashboardPage
+com/easyqa/qa/pages/LoginPage.java
+ com.easyqa.qa.pages.LoginPage
