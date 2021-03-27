@@ -1,87 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FirstTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-03-14T07:15:06" hostname="DESKTOP-IQLPRG6" time="2.655">
+<testsuite name="FirstTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-27T07:26:40" hostname="DESKTOP-IQLPRG6" time="13.251">
   <properties/>
-  <testcase name="testUnitedTestCase" classname="FirstTest" time="2.655">
-    <failure message="io.github.bonigarcia.wdm.WebDriverManagerException: io.github.bonigarcia.wdm.WebDriverManagerException: chromedriver 88.0.4324.182 for WIN64 not found in https://chromedriver.storage.googleapis.com/" type="io.github.bonigarcia.wdm.WebDriverManagerException">io.github.bonigarcia.wdm.WebDriverManagerException: io.github.bonigarcia.wdm.WebDriverManagerException: chromedriver 88.0.4324.182 for WIN64 not found in https://chromedriver.storage.googleapis.com/
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:612)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:538)
-	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:609)
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:538)
-	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:271)
-	at com.codeborne.selenide.webdriver.WebDriverBinaryManager.setupChrome(WebDriverBinaryManager.java:20)
-	at com.codeborne.selenide.webdriver.WebDriverBinaryManager.setupBinaryPath(WebDriverBinaryManager.java:10)
-	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:49)
-	at com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:38)
-	at com.codeborne.selenide.drivercommands.LazyDriver.createDriver(LazyDriver.java:93)
-	at com.codeborne.selenide.drivercommands.LazyDriver.getAndCheckWebDriver(LazyDriver.java:87)
-	at com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:143)
-	at com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:61)
-	at com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:32)
-	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:67)
-	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:91)
-	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:80)
-	at com.codeborne.selenide.Selenide.open(Selenide.java:123)
-	at FirstTest.testUnitedTestCase(FirstTest.java:35)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:141)
-	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:90)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:133)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: io.github.bonigarcia.wdm.WebDriverManagerException: chromedriver 88.0.4324.182 for WIN64 not found in https://chromedriver.storage.googleapis.com/
-	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:531)
-	... 67 more
-</failure>
-  </testcase>
+  <testcase name="testUnitedTestCase" classname="FirstTest" time="13.251"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[мар 14, 2021 4:15:06 PM com.codeborne.selenide.drivercommands.LazyDriver getAndCheckWebDriver
+  <system-err><![CDATA[мар 27, 2021 4:26:40 PM com.codeborne.selenide.drivercommands.LazyDriver getAndCheckWebDriver
 INFO: No webdriver is bound to current thread: 11 - let's create a new webdriver
 SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 89.0.4389.23 (61b08ee2c50024bab004e48d2b1b083cdbdac579-refs/branch-heads/4389@{#294}) on port 32096
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+мар 27, 2021 4:26:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+мар 27, 2021 4:26:45 PM com.codeborne.selenide.webdriver.BrowserResizer adjustBrowserSize
+INFO: Set browser size to 1600x1000
+мар 27, 2021 4:26:45 PM com.codeborne.selenide.webdriver.WebDriverFactory logBrowserVersion
+INFO: BrowserName=chrome Version=89.0.4389.90 Platform=WINDOWS
+мар 27, 2021 4:26:45 PM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
+INFO: Selenide v. 5.1.0
+мар 27, 2021 4:26:45 PM com.codeborne.selenide.webdriver.WebDriverFactory logSeleniumInfo
+INFO: Selenium WebDriver v. 3.141.59 build time: 2018-11-14T08:17:03
+мар 27, 2021 4:26:45 PM com.codeborne.selenide.drivercommands.CreateDriverCommand createDriver
+INFO: Create webdriver in current thread 11: ChromeDriver -> ChromeDriver: chrome on WINDOWS (1ce63fa51f4b61fe3d494d7eee2c5e6f)
 ]]></system-err>
 </testsuite>

@@ -1,12 +1,16 @@
 package com.easyqa.qa.pages;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
-
-import static com.codeborne.selenide.Selenide.$;
+import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.support.FindBy;
 
 public class DashboardPage {
+    @FindBy(xpath = "//header[@id='head_menu']//a[@href='/user/edit']")
+    public SelenideElement profileLink;
+
     public void checkUserAuthorized() {
-                $(UIMap.profileLink).shouldBe(Condition.visible);
+        profileLink.shouldBe(Condition.visible);
     }
+
+
 }

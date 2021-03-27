@@ -1,17 +1,12 @@
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
-/*import org.openqa.selenium.*;*/
 import com.easyqa.qa.pages.DashboardPage;
 import com.easyqa.qa.pages.LoginPage;
-import com.easyqa.qa.pages.UIMap;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.Selenide.open;
-
-import static org.testng.Assert.fail;
 
 
 public class FirstTest {
@@ -26,17 +21,17 @@ public class FirstTest {
         options.addArguments("--ignore-certificate-errors");
         driver = new ChromeDriver(options);*/
         Configuration.browserCapabilities.setAcceptInsecureCerts(true);
-        Configuration.browser="chrome";
-
+        Configuration.browser = "chrome";
+        Configuration.browserSize = "1600x1000";
     }
 
     @Test
     public void testUnitedTestCase() {
-      LoginPage loginPage = open("https://app.geteasyqa.com/users/sign_in",LoginPage.class);
-      loginPage.enterLogin("maryamguxi@gmail.com");
-      loginPage.enterPassword("45test45");
-      DashboardPage dashboardPage = loginPage.clickLoginBtn();
-      dashboardPage.checkUserAuthorized();
+        LoginPage loginPage = open("https://app.geteasyqa.com/users/sign_in", LoginPage.class);
+        loginPage.enterLogin("maryamguxi@gmail.com");
+        loginPage.enterPassword("45test45");
+        DashboardPage dashboardPage = loginPage.clickLoginBtn();
+        dashboardPage.checkUserAuthorized();
 
     /*
       Selenide.$(UIMap.login).click();

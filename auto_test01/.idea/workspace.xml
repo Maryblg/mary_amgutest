@@ -67,29 +67,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.FirstTest">
+  <component name="RunManager">
     <configuration name="FirstTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;FirstTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":testbase" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="FirstTest.testUntitledTestCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -152,17 +131,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Gradle.FirstTest" />
-      <item itemvalue="Gradle.FirstTest.testUntitledTestCase" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.FirstTest" />
         <item itemvalue="Gradle.FirstTest" />
         <item itemvalue="Gradle.FirstTest" />
         <item itemvalue="Gradle.FirstTest" />
-        <item itemvalue="Gradle.FirstTest.testUntitledTestCase" />
       </list>
     </recent_temporary>
   </component>
