@@ -76,7 +76,7 @@ public void openProjects(){
 */
     @Test
     public void createCard(){
-        CardData issue = new CardData("test2", "test description");
+        CardData issue = new CardData("test5", "test description8", "1");
         UserData userdate = new UserData("maryamguxi@gmail.com", "45test45","https://app.geteasyqa.com/users/sign_in" );
         LoginPage loginPage = open(userdate.getAuthPage(), LoginPage.class);
         loginPage.enterLogin(userdate.getUserName());
@@ -90,7 +90,7 @@ public void openProjects(){
         IssuePage issuePage = projectDashboardPage.openIssues();
         issuePage.chekIssuesPage();
         issuePage.clickAddNewIssue();
-        issuePage.addNewIssue(issue.getCardName(), issue.getCardDescription());
+        issuePage.addNewIssue(issue.getCardName(), issue.getCardDescription(), issue.getCardPriority());
         issuePage.checkIssueAdded(issue.getCardName());
     }
 

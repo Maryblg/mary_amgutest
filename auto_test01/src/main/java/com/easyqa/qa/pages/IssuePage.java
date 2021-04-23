@@ -29,6 +29,16 @@ public class IssuePage {
     @FindBy(xpath = "//label[.='High']")
     public SelenideElement IssuePriorityHight;
 
+    @FindBy(xpath = "//label[.='Low']")
+    public SelenideElement IssuePriorityLow;
+
+    @FindBy(xpath = "//label[.='Medium']")
+    public SelenideElement IssuePriorityMedium;
+
+    @FindBy(xpath = "//label[.='Critical']")
+    public SelenideElement IssuePriorityCritical;
+
+
     @FindBy(name = "commit")
     public SelenideElement issueSaveBtn;
 
@@ -51,18 +61,46 @@ public void setIssuePriorityHight(){
     IssuePrioritySelector.click();
     IssuePriorityHight.click();
 }
-    public void addNewIssue(String issueName, String issueDesc) {
+    public void setIssuePriorityLow(){
+        IssuePrioritySelector.click();
+        IssuePriorityLow.click();
+    }
+    public void setIssuePriorityMedium(){
+        IssuePrioritySelector.click();
+        IssuePriorityMedium.click();
+    }
+
+    public void setIssuePriorityCritical(){
+        IssuePrioritySelector.click();
+        IssuePriorityCritical.click();
+    }
+
+
+    public void addNewIssue(String issueName, String issueDesc, String issuePriority) {
         issueSummary.click();
         issueSummary.sendKeys(issueName);
 
         issueDescription.click();
         issueDescription.sendKeys(issueDesc);
         setIssueTypeBug();
-        setIssuePriorityHight();
+        setPriority(issuePriority);
         issueSaveBtn.click();
     }
 
-    public void checkIssueAdded(String issueName) {
-            cardName.shouldBe(Condition.text(issueName));
+    public void checkIssueAdded(String issueName) { cardName.shouldBe(Condition.text(issueName));
+    }
+
+    public void setPriority(String priority ) {
+           switch (priority) {
+                case "1": setIssuePriorityLow();
+                break;
+                case "2": setIssuePriorityMedium();
+                break;
+                case "3": setIssuePriorityHight();
+                break;
+                case "4": setIssuePriorityCritical();
+                break;
+
+            }
     }
 }

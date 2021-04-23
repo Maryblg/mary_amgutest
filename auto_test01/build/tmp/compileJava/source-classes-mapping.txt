@@ -1,3 +1,7 @@
+com/easyqa/qa/pages/util/UserData.java
+ com.easyqa.qa.pages.util.UserData
+com/easyqa/qa/pages/util/CardData.java
+ com.easyqa.qa.pages.util.CardData
 com/easyqa/qa/pages/DashboardPage.java
  com.easyqa.qa.pages.DashboardPage
 com/easyqa/qa/pages/IssuePage.java
@@ -8,7 +12,3 @@ com/easyqa/qa/pages/ProjectsPage.java
  com.easyqa.qa.pages.ProjectsPage
 com/easyqa/qa/pages/ProjectDashboardPage.java
  com.easyqa.qa.pages.ProjectDashboardPage
-com/easyqa/qa/pages/util/CardData.java
- com.easyqa.qa.pages.util.CardData
-com/easyqa/qa/pages/util/UserData.java
- com.easyqa.qa.pages.util.UserData
