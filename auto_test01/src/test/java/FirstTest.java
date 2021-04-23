@@ -1,7 +1,8 @@
 import com.codeborne.selenide.Configuration;
-import com.easyqa.qa.pages.DashboardPage;
-import com.easyqa.qa.pages.LoginPage;
-import org.testng.annotations.AfterClass;
+import com.easyqa.qa.pages.*;
+import com.easyqa.qa.pages.util.CardData;
+import com.easyqa.qa.pages.util.UserData;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -24,16 +25,16 @@ public class FirstTest {
         Configuration.browser = "chrome";
         Configuration.browserSize = "1600x1000";
     }
-
+/*
     @Test
-    public void testUnitedTestCase() {
+    public void loginAsRegistrereadUser() {
         LoginPage loginPage = open("https://app.geteasyqa.com/users/sign_in", LoginPage.class);
         loginPage.enterLogin("maryamguxi@gmail.com");
         loginPage.enterPassword("45test45");
         DashboardPage dashboardPage = loginPage.clickLoginBtn();
         dashboardPage.checkUserAuthorized();
 
-    /*
+
       Selenide.$(UIMap.login).click();
       Selenide.$(UIMap.login).clear();
       Selenide.$(UIMap.login).sendKeys("maryamguxi@gmail.com");
@@ -60,10 +61,40 @@ public class FirstTest {
         driver.findElement(By.id("user_password")).click();
         driver.findElement(By.id("user_password")).clear();
         driver.findElement(By.id("user_password")).sendKeys("45test45");
-        driver.findElement(By.name("commit")).click();*/
+        driver.findElement(By.name("commit")).click();
+    }
+@Test
+public void openProjects(){
+    LoginPage loginPage = open("https://app.geteasyqa.com/users/sign_in", LoginPage.class);
+    loginPage.enterLogin("maryamguxi@gmail.com");
+    loginPage.enterPassword("45test45");
+    DashboardPage dashboardPage = loginPage.clickLoginBtn();
+    dashboardPage.checkUserAuthorized();
+    ProjectsPage projectsPage = dashboardPage.openMyProjects();
+    projectsPage.chekProjectsPages();
+}
+*/
+    @Test
+    public void createCard(){
+        CardData issue = new CardData("test2", "test description");
+        UserData userdate = new UserData("maryamguxi@gmail.com", "45test45","https://app.geteasyqa.com/users/sign_in" );
+        LoginPage loginPage = open(userdate.getAuthPage(), LoginPage.class);
+        loginPage.enterLogin(userdate.getUserName());
+        loginPage.enterPassword(userdate.getUserPassword());
+        DashboardPage dashboardPage = loginPage.clickLoginBtn();
+        dashboardPage.checkUserAuthorized();
+        ProjectsPage projectsPage = dashboardPage.openMyProjects();
+        projectsPage.chekProjectsPages();
+        ProjectDashboardPage projectDashboardPage = projectsPage.openProject();
+        projectDashboardPage.chekProjectDashboardPage();
+        IssuePage issuePage = projectDashboardPage.openIssues();
+        issuePage.chekIssuesPage();
+        issuePage.clickAddNewIssue();
+        issuePage.addNewIssue(issue.getCardName(), issue.getCardDescription());
+        issuePage.checkIssueAdded(issue.getCardName());
     }
 
-    @AfterClass(alwaysRun = true)
+    @AfterMethod
     public void tearDown() throws Exception {
         /*driver.quit();
         String verificationErrorString = verificationErrors.toString();
